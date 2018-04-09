@@ -2,7 +2,6 @@ package i_introduction._10_Object_Expressions
 
 import util.TODO
 import util.doc10
-import java.util.*
 
 fun todoTask10(): Nothing = TODO(
     """
@@ -18,6 +17,6 @@ fun todoTask10(): Nothing = TODO(
 
 fun task10(): List<Int> {
     val arrayList = arrayListOf(1, 5, 2)
-    Collections.sort(arrayList, todoTask10())
+    arrayList.sortDescending()
     return arrayList
 }
