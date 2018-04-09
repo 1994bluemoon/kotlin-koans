@@ -14,7 +14,7 @@ fun todoTask11(): Nothing = TODO(
 )
 
 fun task11(): List<Int> {
-    val arrayList = arrayListOf(1, 5, 2)
-    Collections.sort(arrayList, { x, y -> todoTask11() })
+    var arrayList = arrayListOf(1, 5, 2)
+    Collections.sort(arrayList, { x, y -> y - x })
     return arrayList
 }
