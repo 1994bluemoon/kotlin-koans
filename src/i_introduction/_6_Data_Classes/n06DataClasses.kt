@@ -15,7 +15,7 @@ fun todoTask6(): Nothing = TODO(
     references = { Person("Alice", 29) }
 )
 
-class Person(val name: String, val age: Int)
+data class Person(val name: String, val age: Int)
 
 fun task6(): List<Person> {
     //todoTask6()

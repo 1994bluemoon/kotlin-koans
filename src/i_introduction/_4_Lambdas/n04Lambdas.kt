@@ -22,13 +22,4 @@ fun todoTask4(collection: Collection<Int>): Nothing = TODO(
     documentation = doc4(),
     references = { JavaCode4().task4(collection) })
 
-fun tas(collection: Collection<Int>): Boolean{
-    /*return Iterables.any(collection, object : Predicate<Int>() {
-        fun apply(element: Int?): Boolean {
-            return element!! % 2 == 0
-        }
-    })*/
-    return true
-}
-
-fun task4(collection: Collection<Int>): Boolean = tas(collection)
+fun task4(collection: Collection<Int>): Boolean = collection.any { i: Int -> i % 2 == 0 }
