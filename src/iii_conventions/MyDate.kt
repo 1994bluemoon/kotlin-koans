@@ -13,6 +13,13 @@ data class MyDate (val year: Int, val month: Int, val dayOfMonth: Int) : Compara
     }
 }
 
+operator fun MyDate.plus(other: TimeInterval) : MyDate = this.addTimeIntervals(other, 1)
+
+class RepeatedTimeInterval(val timeInterval: TimeInterval, val number: Int)
+operator fun TimeInterval.times(number: Int) = RepeatedTimeInterval(this, number)
+
+operator fun MyDate.plus(timeIntervals: RepeatedTimeInterval) = addTimeIntervals(timeIntervals.timeInterval, timeIntervals.number)
+
 operator fun MyDate.rangeTo(other: MyDate): DateRange = DateRange(this, other)
 
 enum class TimeInterval {
