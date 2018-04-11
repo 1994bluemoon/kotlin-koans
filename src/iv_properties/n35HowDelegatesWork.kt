@@ -2,6 +2,7 @@ package iv_properties
 
 import iii_conventions.MyDate
 import util.TODO
+import java.lang.reflect.Field
 import java.util.*
 import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KProperty
@@ -29,8 +30,10 @@ class D {
 class EffectiveDate<R> : ReadWriteProperty<R, MyDate> {
     var timeInMillis: Long? = null
 
-    operator override fun getValue(thisRef: R, property: KProperty<*>): MyDate = todoTask35()
-    operator override fun setValue(thisRef: R, property: KProperty<*>, value: MyDate) = todoTask35()
+    operator override fun getValue(thisRef: R, property: KProperty<*>): MyDate = timeInMillis!!.toDate()
+    operator override fun setValue(thisRef: R, property: KProperty<*>, value: MyDate){
+        timeInMillis = value.toMillis()
+    }
 }
 
 fun MyDate.toMillis(): Long {
