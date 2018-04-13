@@ -5,6 +5,7 @@ import util.JavaCode;
 import java.util.Collection;
 import java.util.Iterator;
 
+/*
 public class JavaCode1 extends JavaCode {
     public String task1(Collection<Integer> collection) {
         StringBuilder sb = new StringBuilder();
@@ -20,4 +21,4 @@ public class JavaCode1 extends JavaCode {
         sb.append("}");
         return sb.toString();
     }
-}
+}*/
